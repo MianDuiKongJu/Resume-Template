@@ -6,11 +6,19 @@
   <title>
 		John Doe Resume Template
 	</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 	<style>
+		* {
+			font-family: 'Roboto', sans-serif;
+		}
 		body{
-			background-color:#dcdcdc;
-			margin-left:20px;
-			margin-right:20px;
+			background-color: #f5f5f5;
+			background-image: url(https://hades217.github.io/images/main_bg.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			margin-left:40px;
+			margin-right:40px;
 		}
 		.greenWords{
 			color:#2eca7f;
@@ -20,7 +28,7 @@
 			margin-left:auto;
 			margin-right:auto;
 			width:100%;
-			height:100px;
+			height:80px;
 			background-color: transparent;
 			max-width: 1032px;
 			text-align: center;
@@ -33,7 +41,7 @@
 		.site__headerNav{
 			display:flex;
 			flex-direction: row;
-			justify-content: flex-end;
+			/* justify-content: space-evenly; */
 			position:relative;
 			float:right;
 			/* margin-right:20px; */
@@ -45,17 +53,100 @@
 			padding-left: 10px;
 			padding-right:10px;
 			/* margin-right:20px; */
+      opacity: 0.6;
 		}
 		.site__headerNavLink{
 			color:rgb(165, 165, 165);
-			transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
 		}
+    .site__headerNavLink::after{
+      content: "";
+      border-bottom: 3px solid #2eca7f;
+      width: 0px;
+      display: block;
+      margin: auto;
+      margin-top: 3px;
+      transition: width 0.5s ease-in-out;
+    }
 		.site__headerNavLink:hover{
-			color:rgb(70, 70, 70);
-			text-decoration: none;
-			/* padding:5px; */
-			border: 2px solid #2eca2e;
-			border-style:none none solid none;
+			opacity: 1;
+      text-decoration: none;
+      color: black;
+		}
+    .site__headerNavLink:hover::after{
+     width: 30px;
+		}
+		.resume {
+			max-width: 1032px;
+			width: 100%;
+			margin: auto;
+		}
+		.resume__header {
+			background-color: #2eca7f;
+			padding-top: 25px;
+			color: white;
+			text-align: center;
+			border-radius: 10px 10px 0 0;
+			height: 100px;
+		}
+		.resume__content {
+			background-color: white;
+		}
+		.resume__tittle {
+			font-size: 1.2rem;
+			font-weight: 400;
+		}
+		.resume__education {
+			margin: 15px;
+		}
+		.resume__topBlockLeftLine {
+			border-left: 3px solid gray;
+		}
+		.resume__introductionBlock {
+			box-shadow: 1px 1px 2px gray;
+			border: 0px solid black;
+			border-left: 3px solid #2eca7f;
+			padding: 15px;
+			margin-left: 20px;
+		}
+		.resume__greenCircle {
+			border: 2px solid #2eca7f;
+			border-radius: 50%;
+			display:inline-block;
+			height: 15px;
+			width: 15px;
+			position: absolute;
+			left:24px;
+		}
+		.resume__greenCircle:after{
+			content:"__";
+			display:inline-block;
+			position:absolute;
+			bottom:3px;
+			left:13px;
+			color:#2eca7f;
+			
+		}
+		.resume__highlightPeriod {
+			color: #2eca7f
+
+		}
+		.resume__uniNameCompanyName {
+			opacity: 0.5;
+		}
+		.resume__uniNameCompanyName:before {
+			content:"|  "
+		}
+		.resume__powerContainer {
+			border: 2px solid lightgray;
+			width: 95%;
+			height:10px;
+		}
+		.resume__powerLine {
+			border: 3px solid #2eca7f;
+			background: #2eca7f;
+			height: 10px;
+			width: 80%;
 		}
 	</style>
 </head>
@@ -100,108 +191,132 @@
 	</header>
 	<main class="resume">
     <div class="resume__header">
-			<h1>Resume</h1>
+			<h1 style="font-weight: 700;">Resume</h1>
 		</div>
 		<div class="resume__content">
-			<div class="resume__content-top">
-				<div class="resume__education">
+			<div class="row">
+				<div class="col-sm-6 col-md-6 col-lg-6">
 					<div class="resume__tittle">
 						Education
 					</div>
-					<div class="resume__introductionBlock">
-						<div>
+					<div class="resume__education resume__topBlockLeftLine">
+						<div class="resume__introductionBlock">
+							<div class="resume__greenCircle"> </div>
 							<h5>
 								<!-- space for course name -->
+								CourseA
 							</h5>
-							<span>
+							<span class="resume__highlightPeriod">
 								<!-- space for period -->
+								2018
 							</span>
-							<span>
+							<span class="resume__uniNameCompanyName">
 								<!-- space for name of university -->
+								University of Newcastle
 							</span>
+							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora suscipit nemo non. Molestias voluptatum adipisci minima! Voluptatibus ratione reprehenderit perferendis!</p>
 						</div>
-						<div>
+						<div class="resume__introductionBlock">
 							<h5>
-								<!-- space for course name -->
+								CourseB
 							</h5>
-							<span>
+							<span class="resume__highlightPeriod">
 								<!-- space for period -->
+								2019
 							</span>
-							<span>
+							<span class="resume__uniNameCompanyName">
 								<!-- space for name of university -->
+								Jiangren Academy
 							</span>
+							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora suscipit nemo non. Molestias voluptatum adipisci minima! Voluptatibus ratione reprehenderit perferendis!</p>
 						</div>
-						<div>
+						<div class="resume__introductionBlock">
 							<h5>
 								<!-- space for course name -->
+								CourseC
 							</h5>
-							<span>
+							<span class="resume__highlightPeriod">
 								<!-- space for period -->
+								2020
 							</span>
-							<span>
+							<span class="resume__uniNameCompanyName">
 								<!-- space for name of university -->
+								RMIT
 							</span>
+							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora suscipit nemo non. Molestias voluptatum adipisci minima! Voluptatibus ratione reprehenderit perferendis!</p>
 						</div>
 					</div>
 				</div>
-				<div class="resume__experience">
-					<div class="resume__Tittle">
+				<div class="col-sm-6 col-md-6 col-lg-6">
+					<div class="resume__tittle">
 						Experience
 					</div>
-					<div class="resume__introductionBlock">
-						<div>
+					<div class="resume__education resume__topBlockLeftLine">
+						<div class="resume__introductionBlock">
 							<h5>
 								<!-- space for Job Tittle -->
+								Tittle1
 							</h5>
-							<span>
+							<span class="resume__highlightPeriod">
 								<!-- space for period -->
+								Dec 2012 - Current
 							</span>
-							<span>
+							<span class="resume__uniNameCompanyName">
 								<!-- space for company name -->
+								xxx Company
 							</span>
+							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora suscipit nemo non. Molestias voluptatum adipisci minima! Voluptatibus ratione reprehenderit perferendis!</p>
 						</div>
-						<div>
+						<div class="resume__introductionBlock">
 							<h5>
 								<!-- space for Job Tittle -->
+								Tittle2
 							</h5>
-							<span>
+							<span class="resume__highlightPeriod">
 								<!-- space for period -->
+								Jun 2018 - Jun 2019
 							</span>
-							<span>
+							<span class="resume__uniNameCompanyName">
 								<!-- space for company name -->
+								xxx company2
 							</span>
+							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora suscipit nemo non. Molestias voluptatum adipisci minima! Voluptatibus ratione reprehenderit perferendis!</p>
 						</div>
-						<div>
+						<div class="resume__introductionBlock">
 							<h5>
 								<!-- space for Job Tittle -->
+								Tittle3
 							</h5>
-							<span>
+							<span class="resume__highlightPeriod">
+								Dec 2017 - Dec 2018
 								<!-- space for period -->
 							</span>
-							<span>
+							<span class="resume__uniNameCompanyName">
 								<!-- space for company name -->
+								xxx company3
 							</span>
+							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora suscipit nemo non. Molestias voluptatum adipisci minima! Voluptatibus ratione reprehenderit perferendis!</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="resume__content-bottom">
-				<div class="resume__Design">
-					<div class="resume__Tittle">Design Skills</div>
+			<div class="row">
+				<div class="col-sm-6 col-md-6 col-lg-6">
+					<div class="resume__tittle">Design Skills</div>
 					<div class="resume__powerBlock">
-							<h4>Web Design</h4>
+							<h6>Web Design</h6>
 							<div class="resume__powerContainer">
 								<div class="resume__powerLine">
 									<!-- space for the power line -->
 								</div>
 							</div>
-							<h4>Graphic Design</h4>
+							<h6>Graphic Design</h6>
 							<div class="resume__powerContainer">
 								<div class="resume__powerLine">
 									<!-- space for the power line -->
 								</div>
 							</div>
-							<h4>Print Design</h4>
+							<h6>Print Design</h6>
 							<div class="resume__powerContainer">
 								<div class="resume__powerLine">
 									<!-- space for the power line -->
@@ -209,22 +324,22 @@
 							</div>
 					</div>
 				</div>
-				<div class="resume__Coding">
-					<div class="resume__Tittle">Coding Skills</div>
+				<div class="col-sm-6 col-md-6 col-lg-6">
+					<div class="resume__tittle">Coding Skills</div>
 					<div class="resume__poweBlock">
-						<h4>HTML5</h4>
+						<h6>HTML5</h6>
 						<div class="resume__powerContainer"> 
 							<div class="resume__powerLine">
 								<!-- space for the power line -->
 							</div>
 						</div>
-						<h4>CSS3/SASS</h4>
+						<h6>CSS3/SASS</h6>
 						<div class="resume__powerContainer">
 							<div class="resume__powerLine">
 								<!-- space for the power line -->
 							</div>
 						</div>
-						<h4>jQuery</h4>
+						<h6>jQuery</h6>
 						<div class="resume__powerContainer">
 							<div class="resume__powerLine">
 								<!-- space for the power line -->
