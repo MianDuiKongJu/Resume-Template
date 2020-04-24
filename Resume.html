@@ -138,19 +138,28 @@
 			content:"|  "
 		}
 		.resume__powerContainer {
-			border: 2px solid lightgray;
+			border: 3px solid lightgray;
 			width: 95%;
-			height:10px;
+			height:15px;
 		}
 		.resume__powerLine {
 			border: 3px solid #2eca7f;
 			background: #2eca7f;
 			height: 10px;
 			width: 80%;
+			animation: test 5s;
+		}
+		@keyframes test {
+			from {
+				width:1%
+			}
+				to {
+					width:80%
+				}
 		}
 	</style>
 </head>
-<body>
+<body> 
 	<header>
 		<div class="site__headerContent">
 			<div class="site__headerTittle">
