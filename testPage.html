@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-		John Doe Resume Template
+  <title>John Doe Resume Template
 	</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
@@ -41,7 +40,7 @@
 		.site__headerNav{
 			display:flex;
 			flex-direction: row;
-			/* justify-content: space-evenly; */
+			/* justify-content: flex-end; */
 			position:relative;
 			float:right;
 			/* margin-right:20px; */
@@ -75,8 +74,141 @@
 		}
     .site__headerNavLink:hover::after{
      width: 30px;
+    }
+    .navClicked {
+      color: black;
+    }
+    .navClicked:after{
+      content: "";
+      border-bottom: 3px solid #2eca7f;
+      width: 30px;
+      display: block;
+      margin: auto;
+      margin-top: 3px;
+    }
+		.home{
+			/* border: green solid 1px;
+			border-radius: 10px;
+			margin:5px 10px 0 10px; */
+			/* margin-left: 20px;
+			margin-right:20px; */
+			max-width: 1032px;
+			width:100%;
+			margin-left: auto;
+			margin-right:auto;
 		}
-		.resume {
+		.home__header{
+			background-color: #2eca7f;
+			padding:30px;
+			margin-bottom: 30px;
+			border-radius: 10px 10px 0 0;
+			display: flex;
+			flex-wrap: wrap;
+			box-shadow: 3px 3px 10px gray;
+		}
+		/* .home__header-left{
+			width:40%;
+			background-color:#2eca7f; 
+		} */
+		.home__headerImage{
+			/* background-color: white; */
+			border: 5px solid white;
+			margin-bottom:-80px;
+			max-width: 280px;
+			transition: all 0.6s ease-in-out;
+			align-content: center;
+			box-shadow: 2px 2px 2px lightgray;
+		}
+		.home__headerImage:hover{
+			opacity: 97%;
+			box-shadow: 5px 8px 10px gray;
+			transform:translateY(-10px);
+			cursor: pointer;
+		}
+		img{
+			align-content: center;
+			max-width: 100%;
+			height:auto;
+			/* 网页变窄后保证图片在名字上面，所以需要用vertical-align：bottom；来处理图片。 */
+			vertical-align:bottom;
+		}
+		/* .home__header-right{
+			width:60%;
+		} */
+		.home__header-right__main{
+			text-align: center;
+			color:white;
+			margin-top:30px;
+		}
+		.home__header-right__main>h1{
+			font-size: 3.7rem;
+			font-weight: 700;
+		}
+		.home__header-right__dynamicRoleDisplay{
+			/* transition: all 1s ease-in-out; */
+			font-weight: 600;
+			font-size: 1.2rem;
+		}
+		.home__header-right__links{
+			display:flex
+			flex-wrap:wrap;
+			text-align:center;
+			margin-top:20px;
+
+		}
+		i{
+			border: 10px solid white;
+			border-radius: 50%;
+			background-color: white;
+		}
+		.home__content{
+			padding-top:80px;
+			margin-top: -30px;
+			border-radius: 0 0 10px 10px;
+			display:flex;
+			flex-wrap:wrap;
+			background-color: white;
+			padding-bottom: 40px;
+			box-shadow: 3px 3px 10px gray;
+		}
+		/* .home__contentIntro{
+			margin-left: -20px;
+		} */
+		.aboutMe{
+			font-size: 1.2rem;
+			font-weight: 700;
+			margin-left: 10px;
+		}
+		.aboutMeContent{
+			font-size: 0.8rem;
+			font-weight: 400;
+			margin-left: 10px;
+		}
+		.listDotFree{
+			list-style: none;
+		}
+		.home__contentTittle{
+			min-width:120px;
+			text-align: left;
+			margin-left:-50px;
+			display:inline-flex;
+			font-size: 0.9rem;
+		}
+		.home__contentValue{
+			text-align: left;
+			/* display: inline-flex; */
+			color: gray;
+		}
+		.linkColor{
+			color: #2eca7f;
+			text-decoration: blue;
+			transition: all 0.3s ease-in-out;
+		}
+		.linkColor:hover{
+			color:orange;
+			text-decoration: none;
+		}
+    .resume {
 			max-width: 1032px;
 			width: 100%;
 			margin: auto;
@@ -262,9 +394,13 @@
 					width:65%
 				}
 		}
+    .hide {
+      /* transform: translateX(-70%) translateY(-49%) rotateY(55deg); */
+      display: none;
+    }
 	</style>
 </head>
-<body> 
+<body>
 	<header>
 		<div class="site__headerContent">
 			<div class="site__headerTittle">
@@ -274,27 +410,27 @@
 			<div class="site__headerNav">
 				<ul">
 					<li class="site_headerNavList">
-						<a href="Home.html" class="site__headerNavLink">
+						<a href=# id="home"class="site__headerNavLink navClicked">
 							Home
 						</a>
 					</li>
 					<li class="site_headerNavList">
-						<a href="Resume.html" class="site__headerNavLink">
+						<a href=# id="resume" class="site__headerNavLink">
 							Resume
 						</a>
 					</li>
 					<li class="site_headerNavList">
-						<a href=# class="site__headerNavLink">
+						<a href=# id="services"class="site__headerNavLink">
 							Services
 						</a>
 					</li>
 					<li class="site_headerNavList">
-						<a href=# class="site__headerNavLink">
+						<a href=# id="blog" class="site__headerNavLink">
 							Blog
 						</a>
 					</li>
 					<li class="site_headerNavList">
-						<a href=# class="site__headerNavLink">
+						<a href=# id="contact" class="site__headerNavLink">
 							Contact
 						</a>
 					</li>
@@ -303,7 +439,109 @@
 	
 		</div>
 	</header>
-	<main class="resume">
+	<main id="homePage" class="home">
+    <div class="home__header">
+				<div class="col-sm-4 col-md-4 col-ld-4">
+					<!-- left part for photo -->
+					<div class="home__headerImage">
+						<!-- for personal image -->
+						<img src="Image/John Doe.png" alt="Resume Image">
+					</div>
+				</div>
+				<div class="col-sm-8 col-md-8 col-ld-8">
+					<!-- right part for name role and links -->
+					<div class="home__header-right__main">
+						<!-- Resume name here -->
+						<h1>
+							<!-- Resume main name with Heading1 here -->
+							John Doe
+						</h1>
+						<div class="home__header-right__dynamicRoleDisplay" id="roleDisplay">
+							<!-- Resume roles showing with two div which only shows one at the same time -->
+							<!-- use setInterval to automatically changing the role showing -->
+							Fronted-Developer
+						</div>
+					</div>
+					<div class="home__header-right__links">
+						<!-- social media links here -->
+						<a href=#>
+							<!-- for twitter -->
+							<i class="fab fa-twitter"></i>
+						</a>
+						<a href=#>
+							<!-- for facebook -->
+							<i class="fab fa-facebook"></i>
+						</a>
+						<a href=#>
+							<!-- for instagram -->
+							<i class="fab fa-instagram"></i>
+						</a>
+					</div>
+				</div>
+		</div>
+		<div class="home__content">
+			<div class="col-sm-6 col-md-6 col-lg-6">
+				<!-- left part for personal introduction -->
+				<h3 class="aboutMe">
+					<!-- above part -->
+					About 
+					<span class="greenWords">Me</span>
+				</h3>
+				<p class="aboutMeContent">
+					<!-- personal introduction part -->
+					Hello! I’m John Doe. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum ullamcorper sem, at placerat dolor volutpat ac. Duis nulla enim, condimentum nec ultricies.
+				</p>
+			</div>
+			<div class="col-sm-6 col-md-6 col-lg-6">
+				<!-- right part with age residence address email & phone -->
+				<ul class="listDotFree">
+					<li>
+						<span class="home__contentTittle">
+							Age:
+						</span>
+						<span class="home__contentValue">
+							29
+						</span>
+					</li>
+					<li>
+						<span class="home__contentTittle">
+							Residence:
+						</span>
+						<span class="home__contentValue">
+							Australia
+						</span>
+					</li>
+					<li>
+						<span class="home__contentTittle">
+							Address:
+						</span>
+						<span class="home__contentValue">
+							Level 3 / 57 Coronation Drive, Brisbane
+						</span>
+					</li>
+					<li>
+						<span class="home__contentTittle">
+							e-mail:
+						</span>
+						<span class="home__contentValue">
+							<a href=# class="linkColor">
+								info@jiangren.com.au
+							</a>
+						</span>
+					</li>
+					<li>
+						<span class="home__contentTittle">
+							Phone:
+						</span>
+						<span class="home__contentValue">
+							+0123 123 456 789
+						</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+  </main>
+  <main id="resumePage" class="resume hide">
     <div class="resume__header">
 			<h1 style="font-weight: 700;">Resume</h1>
 		</div>
@@ -467,6 +705,48 @@
 	</main>
 	<footer>
 		<!-- for feature JavaScript -->
+		<script>
+			const tittleChange = document.getElementById('roleDisplay')
+      let i = 0;
+			function changeTittle(){
+				if(i == 0){
+					i = 1;
+					tittleChange.innerHTML = "Fronted-Developer";
+				}
+				else{
+					i = 0;
+					tittleChange.innerHTML = "Web Designer";
+				}
+			}
+			setInterval("changeTittle()",3000);
+      document.querySelector('#services').addEventListener('click', ()=>{alert('Services page is not finished yet'))
+      document.querySelector('#blog').addEventListener('click', ()=>{alert('Blog page is not finished yet')})
+      document.querySelector('#contact').addEventListener('click', ()=>{alert('Services page is not finished yet')})
+      // function fn(){
+      //   var previous = '';
+      //   var current = 'home'
+      //   changeNavItem();
+      //   function changeNavItem(){
+      //     if(previous) {
+      //       var previousNavItem = document.querySelector('')
+      //     }
+      //   }
+      // } 研究完龙哥的js后更改
+      function clickHome(){
+        document.querySelector('#home').classList.add('navClicked');
+        document.querySelector('#resume').classList.remove('navClicked');
+        document.querySelector('#homePage').classList.remove('hide');
+        document.querySelector('#resumePage').classList.add('hide');
+      }
+      document.querySelector('#home').addEventListener('click', clickHome);
+      function clickResume(){
+        document.querySelector('#home').classList.remove('navClicked');
+        document.querySelector('#resume').classList.add('navClicked');
+        document.querySelector('#homePage').classList.add('hide');
+        document.querySelector('#resumePage').classList.remove('hide');
+      }
+      document.querySelector('#resume').addEventListener('click', clickResume);
+		</script>
 	</footer>
 </body>
 </html>
