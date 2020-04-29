@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>John Doe Resume Template
-	</title>
-	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-	<style>
+  <title>John Doe Resume Template</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <style>
 		* {
 			font-family: 'Roboto', sans-serif;
 		}
@@ -40,10 +39,8 @@
 		.site__headerNav{
 			display:flex;
 			flex-direction: row;
-			/* justify-content: flex-end; */
 			position:relative;
 			float:right;
-			/* margin-right:20px; */
 			
 		}
 		.site_headerNavList{
@@ -51,7 +48,6 @@
 			text-align: center;
 			padding-left: 10px;
 			padding-right:10px;
-			/* margin-right:20px; */
       opacity: 0.6;
 		}
 		.site__headerNavLink{
@@ -87,11 +83,6 @@
       margin-top: 3px;
     }
 		.home{
-			/* border: green solid 1px;
-			border-radius: 10px;
-			margin:5px 10px 0 10px; */
-			/* margin-left: 20px;
-			margin-right:20px; */
 			max-width: 1032px;
 			width:100%;
 			margin-left: auto;
@@ -111,7 +102,6 @@
 			background-color:#2eca7f; 
 		} */
 		.home__headerImage{
-			/* background-color: white; */
 			border: 5px solid white;
 			margin-bottom:-80px;
 			max-width: 280px;
@@ -129,7 +119,6 @@
 			align-content: center;
 			max-width: 100%;
 			height:auto;
-			/* 网页变窄后保证图片在名字上面，所以需要用vertical-align：bottom；来处理图片。 */
 			vertical-align:bottom;
 		}
 		/* .home__header-right{
@@ -145,7 +134,6 @@
 			font-weight: 700;
 		}
 		.home__header-right__dynamicRoleDisplay{
-			/* transition: all 1s ease-in-out; */
 			font-weight: 600;
 			font-size: 1.2rem;
 		}
@@ -154,7 +142,6 @@
 			flex-wrap:wrap;
 			text-align:center;
 			margin-top:20px;
-
 		}
 		i{
 			border: 10px solid white;
@@ -196,7 +183,6 @@
 		}
 		.home__contentValue{
 			text-align: left;
-			/* display: inline-flex; */
 			color: gray;
 		}
 		.linkColor{
@@ -212,7 +198,6 @@
 			max-width: 1032px;
 			width: 100%;
 			margin: auto;
-			/* box-shadow: 3px 3px 10px gray; */
 		}
 		.resume__header {
 			background-color: #2eca7f;
@@ -401,7 +386,6 @@
 				}
 		}
     .hide {
-      /* transform: translateX(-70%) translateY(-49%) rotateY(55deg); */
       display: none;
     }
 	</style>
