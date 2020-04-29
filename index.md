@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>John Doe Resume Template</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-  <style>
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  	<style>
 		* {
 			font-family: 'Roboto', sans-serif;
 		}
@@ -41,47 +41,46 @@
 			flex-direction: row;
 			position:relative;
 			float:right;
-			
 		}
 		.site_headerNavList{
 			display:inline-block;
 			text-align: center;
 			padding-left: 10px;
 			padding-right:10px;
-      opacity: 0.6;
+      			opacity: 0.6;
 		}
 		.site__headerNavLink{
 			color:rgb(165, 165, 165);
-      transition: all 0.3s ease-in-out;
+      			transition: all 0.3s ease-in-out;
 		}
-    .site__headerNavLink::after{
-      content: "";
-      border-bottom: 3px solid #2eca7f;
-      width: 0px;
-      display: block;
-      margin: auto;
-      margin-top: 3px;
-      transition: width 0.5s ease-in-out;
-    }
+    		.site__headerNavLink::after{
+		      	content: "";
+		     	border-bottom: 3px solid #2eca7f;
+		      	width: 0px;
+		      	display: block;
+		      	margin: auto;
+		      	margin-top: 3px;
+		     	transition: width 0.5s ease-in-out;
+    		}
 		.site__headerNavLink:hover{
 			opacity: 1;
-      text-decoration: none;
-      color: black;
+      			text-decoration: none;
+      			color: black;
 		}
-    .site__headerNavLink:hover::after{
-     width: 30px;
-    }
-    .navClicked {
-      color: black;
-    }
-    .navClicked:after{
-      content: "";
-      border-bottom: 3px solid #2eca7f;
-      width: 30px;
-      display: block;
-      margin: auto;
-      margin-top: 3px;
-    }
+    		.site__headerNavLink:hover::after{
+     			width: 30px;
+   		}
+    		.navClicked {
+      			color: black;
+    		}
+    		.navClicked:after{
+		      	content: "";
+		      	border-bottom: 3px solid #2eca7f;
+		      	width: 30px;
+		      	display: block;
+		      	margin: auto;
+		     	 margin-top: 3px;
+  		}
 		.home{
 			max-width: 1032px;
 			width:100%;
@@ -97,10 +96,6 @@
 			flex-wrap: wrap;
 			box-shadow: 3px 3px 10px gray;
 		}
-		/* .home__header-left{
-			width:40%;
-			background-color:#2eca7f; 
-		} */
 		.home__headerImage{
 			border: 5px solid white;
 			margin-bottom:-80px;
@@ -121,9 +116,6 @@
 			height:auto;
 			vertical-align:bottom;
 		}
-		/* .home__header-right{
-			width:60%;
-		} */
 		.home__header-right__main{
 			text-align: center;
 			color:white;
@@ -194,7 +186,7 @@
 			color:orange;
 			text-decoration: none;
 		}
-    .resume {
+    		.resume {
 			max-width: 1032px;
 			width: 100%;
 			margin: auto;
@@ -273,16 +265,16 @@
 		}
 		.resume__highlightPeriod {
 			color: #2eca7f;
-      font-size: 0.9rem;
+      			font-size: 0.9rem;
 		}
 		.resume__uniNameCompanyName {
 			opacity: 0.5;
-      font-size: 0.9em;
+     			font-size: 0.9em;
 		}
-    .resume__introduction{
-      font-size: 0.8rem;
-      padding-top: 8px;
-    }
+    		.resume__introduction{
+      			font-size: 0.8rem;
+      			padding-top: 8px;
+    		}
 		.resume__uniNameCompanyName:before {
 			content:"|  "
 		}
@@ -385,9 +377,9 @@
 					width:65%
 				}
 		}
-    .hide {
-      display: none;
-    }
+   		.hide {
+     			display: none;
+    		}
 	</style>
 </head>
 <body>
