@@ -6,7 +6,7 @@
   <title>John Doe Resume Template</title>
   <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-  	<style>
+  <style>
 		* {
 			font-family: 'Roboto', sans-serif;
 		}
